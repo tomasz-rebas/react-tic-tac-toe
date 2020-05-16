@@ -1,0 +1,66 @@
+body {
+  background-color: #333;
+  color: #ddd;
+  font-family: 'Calibri';
+  text-align: center;
+}
+
+.square {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  font-size: 80px;
+  text-align: center;
+  background-color: inherit;
+  color: inherit;
+  border: 3px solid #222;
+  transition: 0.3s;
+}
+
+.square:focus {
+  outline-color: rgba(60, 60, 60, 0);
+}
+
+.x {
+  color: #333333;
+}
+
+/* ----------------------------------------- */
+/* --- borders ----------------------------- */
+/* ----------------------------------------- */
+
+.row:nth-child(1) > .square:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+
+.row:nth-child(1) > .square:nth-child(2) {
+  border-top: none;
+}
+
+.row:nth-child(1) > .square:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+.row:nth-child(2) > .square:nth-child(1) {
+  border-left: none;
+}
+
+.row:nth-child(2) > .square:nth-child(3) {
+  border-right: none;
+}
+
+.row:nth-child(3) > .square:nth-child(1) {
+  border-bottom: none;
+  border-left: none;
+}
+
+.row:nth-child(3) > .square:nth-child(2) {
+  border-bottom: none;
+}
+
+.row:nth-child(3) > .square:nth-child(3) {
+  border-bottom: none;
+  border-right: none;
+}
