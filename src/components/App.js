@@ -11,7 +11,8 @@ class App extends React.Component {
             squares: [],
             gameOver: false,
             winner: null,
-            moveCount: 0
+            moveCount: 0,
+            winningSquares: []
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -61,7 +62,8 @@ class App extends React.Component {
             if (a === b && a === c && b === c && a === lastMove) {
                 this.setState({
                     gameOver: true,
-                    winner: a
+                    winner: a,
+                    winningSquares: lines[i]
                 });
             }
         }
@@ -94,6 +96,7 @@ class App extends React.Component {
                 <Board 
                     handleClick={this.handleClick} 
                     squares={this.state.squares}
+                    winningSquares={this.state.winningSquares}
                 />
             </div>
         );

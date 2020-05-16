@@ -25,6 +25,11 @@ body {
   transition: 0.3s;
 }
 
+.square-winning {
+  background-color: #ddd;
+  color: #333;
+}
+
 .square:focus {
   outline-color: rgba(60, 60, 60, 0);
 }

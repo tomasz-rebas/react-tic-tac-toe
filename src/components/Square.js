@@ -3,7 +3,7 @@ import React from 'react';
 function Square(props) {
     return (
         <button 
-            className="square" 
+            className={props.winningSquares.includes(props.index) ? 'square square-winning' : 'square'} 
             onClick={() => props.handleClick(props.index)}
         >
             {props.value}
